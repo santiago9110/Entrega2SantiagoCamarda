@@ -1,0 +1,155 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header{
+    min-height: 70px;
+    display: flex;
+    background-color:#282C34 ;
+    justify-content: space-between;
+    align-items: center;
+   /*mueve los elementos hacia adentro osea los hijos*/
+   padding: 10px;
+
+
+}
+.logo
+{
+    display:flex;
+    align-items:center ;
+}
+.logo image
+{
+    display:flex;
+    margin-right: 11px;
+}
+
+
+nav a{
+    font-weight: 600;
+   padding-right: 20px;
+}
+nav a:hover{
+    color: blanchedalmond;
+}
+@media (max-width:800px)
+{
+    header
+    {
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+
+.footer{
+    background-color: #24262B;
+    padding: 80px;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+    display:inline-block ;
+}
+
+.footer-links ul li a
+{
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom:15PX ;
+    transition: all.3s ease;
+}
+/* Estilos para las secciones */
+section {
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los contenedores de títulos */
+.titulo2, .titulo3 {
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes dentro de los títulos */
+.titulo2 img, .titulo3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los párrafos dentro de los títulos */
+.titulo2 p, .titulo3 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Estilos para el texto alternativo de las imágenes */
+.titulo2 img[alt="mar"]::after, .titulo3 img[alt="playa"]::after {
+    content: "Mar";
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+.footer-links ul li a:hover
+{
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.social-link a{
+
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(red, green, blue, alpha);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all.5s ease;
+
+}
+.social-link a:hoover{
+    background-color: #00C3FF;
+}
+
+@media(max-width: 991px)
+{
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+
+    margin-bottom: 30px;
+    }
+}
