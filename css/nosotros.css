@@ -11,7 +11,7 @@
 body {
     background-color: #f2f2f2; /* Fondo claro para toda la página */
     font-family: "Poppins", sans-serif;
-  
+    margin: 0;
     text-align: center; /* Cambia todo el contenido del cuerpo para que esté centrado */
     padding: 0; /* Asegura que no haya espacio alrededor del cuerpo */
 }
@@ -20,7 +20,6 @@ a {
     text-decoration: none;
     color: aliceblue;
 }
-
 
 
 
@@ -70,8 +69,6 @@ nav a {
         padding: 10px 0;
     }
 }
-
-
 
 
 
@@ -130,6 +127,7 @@ section {
 .imagen-con-titulo {
     width: 50%; /* Ajusta el ancho de la imagen */
     margin-right: 20px; /* Agrega un margen derecho para separar la imagen del texto */
+    
 }
 
 .containerTitulo2 p {
@@ -157,12 +155,6 @@ img {
     margin-bottom: 20px;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
 
 section {
     display: grid;
@@ -170,9 +162,11 @@ section {
     grid-gap: 50px;
 }
 
+
 .footer{
     background-color: #24262B;
     padding: 80px;
+    
 }
 
 .footer-row{
@@ -202,10 +196,6 @@ section {
     margin-bottom:15PX ;
     transition: all.3s ease;
 }
-
-
-
-/* Footer */
 .footer {
     background-color: #24262B;
     padding: 80px;
