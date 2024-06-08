@@ -136,12 +136,7 @@ img {
     height: auto;
   }
 
-  #titulo1 .imagen-con-titulo h1 {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente del título */
-    margin-top: 0; /* Elimina el margen superior */
-    text-align: center; /* Centra el texto horizontalmente */
-  }
-
+  
 
 
 /* Estilos para contenedor de imagen con título */
@@ -168,7 +163,19 @@ img {
     transform: scale(1.1);
 }
 
-.imagen-con-titulo h1, .imagen-con-titulo h2, .imagen-con-titulo h3 {
+.imagen-con-titulo h1 {
+    font-size: 36px; /* Ajusta el tamaño de la fuente del título h1 */
+    
+    z-index: 1; /* Asegura que el título h1 esté encima del título h3 */
+  }
+  
+  imagen-con-titulo h3 {
+    font-size: 24px; /* Ajusta el tamaño de la fuente del título h3 */
+    top: 10%; /* Ajusta la posición del título h3 */
+    
+  }
+
+.imagen-con-titulo h3, .imagen-con-titulo h2, .imagen-con-titulo h1 {
     position: absolute; /* Posiciona los títulos dentro del contenedor */
     color: white; /* Color del texto */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
@@ -179,11 +186,12 @@ img {
     left: 50%; /* Centra horizontalmente */
     top: 50%;
     transform: translateX(-50%,-50%); /* Ajuste de posición horizontal */
+    transform: translateY(-50%); /* Ajustamos la posición vertical */
+
     opacity: 0;
     transition: opacity .3s ease;
    
 }
-
 
 .imagen-con-titulo:hover h1, .imagen-con-titulo:hover h2, .imagen-con-titulo:hover h3 {
     opacity: 1;
@@ -238,7 +246,7 @@ img {
    }
 
 
-   @media (max-width: 430px) {
+   @media (max-width: 480px) {
     .imagen-con-titulo {
        width: 100%; /* Ajusta el ancho de la imagen */
        height: 100%; /* Ajusta la altura de la imagen */
