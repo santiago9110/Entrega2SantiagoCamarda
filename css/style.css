@@ -12,7 +12,7 @@
 
 
 body {
-    background-color: #f2f2f2; /* Fondo claro para toda la página */
+    background-color: #161815; /* Fondo claro para toda la página */
     font-family: "Poppins", sans-serif;
     margin: 0;
     text-align: center; /* Cambia todo el contenido del cuerpo para que esté centrado */
@@ -21,55 +21,118 @@ body {
 
 a {
     text-decoration: none;
-    color: aliceblue;
+    color: #FFFFFF;
+}
+p{
+    color: #FFFFFF;
+}
+
+/*CAROUSEL*/
+
+.carousel-item{
+    height: 80vh;
+    min-height: 300px;
+
+
 }
 
 
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
 
-/*header estilos*/
-header {
-
-    min-height: 70px;
-    display: flex;
-    background-color: #282C34;
-    justify-content: center; /* Centra horizontalmente los elementos hijos */
-    align-items: center;
-    padding: 20px;
 }
 
-.logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 11px;
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+
 }
 
 
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100;
+    top: 0;
+    left: 0;
+    background-color: #24262B;
+    z-index: 1;
+}
+*/
 
 
-
-
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Asegura que los enlaces de navegación estén centrados */
-    padding: 0;
-    list-style: none; /* Elimina los puntos de lista */
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
-nav a {
-    font-weight: 600;
-    padding-right: 20px;
-    color: blanchedalmond;
+.navbar-dark .navbar-brand{
+    color: #f2f2f2;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
+
+@media(max-width: 767px){
+
+    .navbar-nav{
+        text-align: center;
+
     }
-    nav {
-        padding: 10px 0;
+    .carousel-item{
+        height: 70vh;
     }
+    .w-100{
+        height: 70vh;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17pxs;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    .about-text{
+        padding-top: 50px;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+    .section-padding{
+        padding: 50px 0;
+    }
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -80,18 +143,10 @@ img {
 
 
 
-
-/*grid de la section de las 4 imagenes*/
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 800px; /*  un ancho máximo para que las imágenes no se estiren demasiado */
-    
+main {
+    padding-top: 70px; /* adjust the value to match the height of your navbar */
   }
+
 
 
 /* Estilos para las secciones */
@@ -301,10 +356,6 @@ img {
 
 
 /* nosotros */
-
-
-
-
 .contenedor-imagen-texto {
     display: flex;
     flex-direction: row;
@@ -357,6 +408,84 @@ img {
 
 .titulo2 img, .titulo3 img {
     margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*paquetes*/
+/* Add some basic styling to the paquetes section */
+
+#paquetes h2 {
+   
+    color: #337ab7; /* same color as the primary buttons */
+    font-weight: bold;
+    
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #23527c;
+    border-color: #23527c;
+}
+
+
+
+.paquete {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image cover the entire container */
+    z-index: -1;
+}
+/* Add media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+    .paquete {
+        flex-basis: 60%; /* adjust the width of each paquete for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .paquete {
+        flex-basis: 100%; /* make each paquete full width on very small screens */
+    }
 }
 
 
