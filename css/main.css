@@ -409,6 +409,40 @@ img {
     flex-basis: 100%; /* make each paquete full width on very small screens */
   }
 }
+
+
+
+
+
+.row{
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.column{
+ flex: 25%;
+ padding: 5px;
+}
+.column img{
+  margin-top: 5px;
+}
+
+@media(max-width : 600px)
+{
+  .column{
+      flex: 100%;
+  }
+}
+
+
+@media(max-width : 800px)
+{
+  .column{
+      flex: 50%;
+  }
+}
+
 .navbar-nav a {
   font-size: 15px;
   text-transform: uppercase;
